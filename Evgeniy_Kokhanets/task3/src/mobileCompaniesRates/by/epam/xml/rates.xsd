@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.epam.by/rates"
+    xmlns:tns="http://www.epam.by/rates" elementFormDefault="qualified">
+    <element name="rates">
+        <complexType>
+            <sequence>
+                <element name="rate" maxOccurs="unbounded">
+                    <complexType>
+                        <sequence>
+                            <element name="name" type="string" />
+                            <element name="operatorName" type="string"/>
+                            <element name="payroll" type="double"/>
+                            <element name="callprices" minOccurs="0">
+                                <complexType>
+                                    <sequence>
+                                        <element name="inNetwork" minOccurs="0">
+                                            <simpleType >
+                                                <restriction base="double">
+                                                    <minInclusive value="0"/>
+                                                </restriction>
+                                            </simpleType>
+                                        </element>
+                                        <element name="outNetwork" minOccurs="0">
+                                            <simpleType >
+                                                <restriction base="double">
+                                                    <minInclusive value="0"/>
+                                                </restriction>
+                                            </simpleType>
+                                        </element>
+                                        <element name="landline" minOccurs="0">
+                                            <simpleType >
+                                                <restriction base="double">
+                                                    <minInclusive value="0"/>
+                                                </restriction>
+                                            </simpleType>
+                                        </element>
+                                    </sequence>
+                                </complexType>
+                            </element>
+                            <element name="smsPrice" minOccurs="0">
+                                <simpleType >
+                                    <restriction base="double">
+                                        <minInclusive value="0"/>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                            <element name="parameters" minOccurs="0">
+                                <complexType>
+                                    <sequence>
+                                        <element name="favoriteNumber" type="string" minOccurs="0"/>
+                                        <element name="tariffication" minOccurs="0">
+                                            <simpleType>
+                                                <restriction base="string">
+                                                    <enumeration value="TWELVE"/>
+                                                    <enumeration value="SIXTY"/>
+                                                </restriction>
+                                            </simpleType>
+                                        </element>
+                                        <element name="connectionFees" minOccurs="0">
+                                            <simpleType >
+                                                <restriction base="double">
+                                                    <minInclusive value="0"/>
+                                                </restriction>
+                                            </simpleType>
+                                        </element>
+                                    </sequence>
+                                </complexType>
+                            </element>
+                        </sequence>
+                        <attribute name="id" type="string" use="required"/>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

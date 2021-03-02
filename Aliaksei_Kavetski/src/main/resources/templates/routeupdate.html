@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Update route</title>
+</head>
+<body>
+<form action="#" th:action="@{/routeupdate}" th:object="${route}" method="post">
+    <label for="id">ID</label>
+    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+    <br/>
+    <label for="status">status</label>
+    <input type="text" th:field="*{status}" id="status" placeholder="status">
+    <br/>
+    <label for="description">Description</label>
+    <input type="text" th:field="*{description}" id="description" placeholder="Description">
+    <br/>
+    <label for="startDate">Start Date</label>
+    <input type="text" th:field="*{startDate}" id="startDate" placeholder="Start Date">
+    <br/>
+    <label for="endDate">End Date</label>
+    <input type="text" th:field="*{endDate}" id="endDate" placeholder="End Date">
+    <br/>
+    <input type="submit" value="Update route">
+</form>
+
+</body>
+</html>

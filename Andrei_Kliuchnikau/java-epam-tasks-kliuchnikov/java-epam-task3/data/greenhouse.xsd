@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="https://training.by/greenhouse/namespaces"
+        xmlns:tns="https://training.by/greenhouse/namespaces"
+        elementFormDefault="qualified">
+    <element name="greenhouse">
+        <complexType>
+            <sequence>
+                <element name="plant" maxOccurs="unbounded">
+                    <complexType>
+                        <sequence>
+                            <element name="name" type="string"/>
+                            <element name="soil">
+                                <simpleType>
+                                    <restriction base="string">
+                                        <enumeration value="подзолистая"/>
+                                        <enumeration value="грунтовая"/>
+                                        <enumeration value="дерново-подзолистая"/>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                            <element name="origin" type="string"/>
+                            <element name="visual-parameters">
+                                <complexType>
+                                    <sequence>
+                                        <element name="stem-color" type="string"/>
+                                        <element name="leaf-color" type="string"/>
+                                        <element name="average-size" type="tns:valid-min-value"/>
+                                    </sequence>
+                                </complexType>
+                            </element>
+                            <element name="growing-tips">
+                                <complexType>
+                                    <sequence>
+                                        <element name="temp" type="tns:valid-temperature"/>
+                                        <element name="lighting" type="boolean"/>
+                                        <element name="irrigation" type="tns:valid-min-value"/>
+                                    </sequence>
+                                </complexType>
+                            </element>
+                            <element name="multiplying">
+                                <simpleType>
+                                    <restriction base="string">
+                                        <enumeration value="листьями"/>
+                                        <enumeration value="черенками"/>
+                                        <enumeration value="семенами"/>
+                                    </restriction>
+                                </simpleType>
+                            </element>
+                        </sequence>
+                        <attribute name="id" use="required">
+                            <simpleType>
+                                <restriction base="ID">
+                                    <pattern value="f[0-9]{1,4}"/>
+                                </restriction>
+                            </simpleType>
+                        </attribute>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+    <simpleType name="valid-min-value">
+        <restriction base="integer">
+            <minInclusive value="1"/>
+        </restriction>
+    </simpleType>
+    <simpleType name="valid-temperature">
+        <restriction base="integer">
+            <minInclusive value="-40"/>
+            <maxInclusive value="40"/>
+        </restriction>
+    </simpleType>
+</schema>

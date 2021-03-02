@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<greenhouse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://training.by/greenhouse/namespaces" xsi:schemaLocation="https://training.by/greenhouse/namespaces greenhouse.xsd">
+<plant id="f1">
+	<name>Пион</name>
+	<soil>подзолистая</soil>
+	<origin>Китай</origin>
+<visual-parameters>
+	<stem-color>Оливковый</stem-color>
+	<leaf-color>Красный</leaf-color>
+	<average-size>18</average-size>
+</visual-parameters>
+<growing-tips>
+	<temp>15</temp>
+	<lighting>true</lighting>
+	<irrigation>12500</irrigation>
+</growing-tips>
+	<multiplying>черенками</multiplying>
+</plant>
+<plant id="f2">
+	<name>Пшеница</name>
+	<soil>дерново-подзолистая</soil>
+	<origin>Армения</origin>
+<visual-parameters>
+	<stem-color>Золотистый</stem-color>
+	<leaf-color>Пшеничный</leaf-color>
+	<average-size>150</average-size>
+</visual-parameters>
+<growing-tips>
+	<temp>25</temp>
+	<lighting>true</lighting>
+	<irrigation>4000</irrigation>
+</growing-tips>
+	<multiplying>семенами</multiplying>
+</plant>
+<plant id="f3">
+	<name>Мирабилис</name>
+	<soil>грунтовая</soil>
+	<origin>Мексика</origin>
+<visual-parameters>
+	<stem-color>Красный</stem-color>
+	<leaf-color>Малиновый</leaf-color>
+	<average-size>45</average-size>
+</visual-parameters>
+<growing-tips>
+	<temp>-20</temp>
+	<lighting>false</lighting>
+	<irrigation>7000</irrigation>
+</growing-tips>
+	<multiplying>листьями</multiplying>
+</plant>
+</greenhouse>

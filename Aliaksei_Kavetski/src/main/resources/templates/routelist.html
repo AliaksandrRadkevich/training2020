@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Routes</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__logo" ><a href="index.html">Car base</a></div>
+            <nav class="nav">
+                <a class="nav__link" href="/users">List of all users</a>
+                <a class="nav__link" href="/requests">Requests</a>
+                <a class="nav__link active" href="/routes">Routes</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div th:switch="${routes}" class="table">
+    <h2 th:case="null"> No routes found!</h2>
+    <div th:case="*">
+        <table style=" border-spacing: 0 10px; font-family: 'Open Sans', sans-serif; font-weight: bold;">
+            <thead>
+            <tr>
+                <th width="80">ID</th>
+                <th width="120">STATUS</th>
+                <th width="120">DESCRIPTION</th>
+                <th width="120">START DATE</th>
+                <th width="120">END DATE</th>
+                <th width="60">EDIT</th>
+                <th width="60">DELETE</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="route: ${routes}">
+                <td th:text="${route.id}"></td>
+                <td th:text="${route.status}"></td>
+                <td th:text="${route.description}"></td>
+                <td th:text="${route.startDate}"></td>
+                <td th:text="${route.endDate}"></td>
+                <td><a th:href="@{routeupdate/{id}(id=${route.id})}">Edit</a></td>
+                <td><a th:href="@{routedelete/{id}(id=${route.id})}">Delete</a></td>
+            </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>
+<form class="createuser" action="/routecreate" target="_blank">
+    <button>Create route</button>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/elective/WEB-INF/lib/log4j-api-2.14.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/out/artifacts/elective/WEB-INF/lib/servlet-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/out/artifacts/elective/WEB-INF/lib/log4j-core-2.14.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/out/artifacts/elective/WEB-INF/lib/jsp-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/out/artifacts/elective/WEB-INF/lib/jstl-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/out/artifacts/elective/WEB-INF/lib/mysql-connector-java-8.0.19.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

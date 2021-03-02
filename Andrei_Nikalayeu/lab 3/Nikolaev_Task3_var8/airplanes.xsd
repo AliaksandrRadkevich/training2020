@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/airplanes"
+	xmlns:tns="http://www.example.org/airplanes" elementFormDefault="qualified">
+	<element name="airplanes">
+        <complexType>
+            <sequence>
+                <element name="airplane" maxOccurs="unbounded">
+                    <complexType>
+                        <sequence>
+                            <element name="model" type="string" />
+                            <element name="origin" type="string" />
+                            <element name="chars">
+                                <complexType>
+                                    <sequence>
+                                        <element name="type">
+                                            <simpleType>
+                                                <restriction base="string">
+                                                    <enumeration value="SUPPORT"/>
+                                                    <enumeration value="ESCORT"/>
+                                                    <enumeration value="FIGHT"/>
+                                                    <enumeration value="INTERCEPT"/>
+                                                    <enumeration value="SCOUT"/>
+                                                </restriction>
+                                            </simpleType>
+                                        </element>
+                                        <element name="seats">
+                                            <simpleType>
+                                                <restriction base="byte">
+                                                    <minInclusive value="1" />
+                                                    <maxInclusive value="2" />
+                                                </restriction>
+                                            </simpleType>
+                                        </element>
+                                        <element name="ammunition" minOccurs="0" maxOccurs="1">
+                                            <complexType>
+                                                <sequence>
+                                                    <element name="gun" minOccurs="0" maxOccurs="1">
+                                                        <complexType>
+                                                           <attribute name="caliber">
+                                                                <simpleType>
+                                                                    <restriction base="positiveInteger">
+                                                                        <minInclusive value="1" />
+                                                                        <maxInclusive value="500" />
+                                                                    </restriction>
+                                                                </simpleType>
+                                                            </attribute>
+                                                         </complexType>
+                                                    </element>
+                                                    <element name="rocket" minOccurs="0" maxOccurs="1">
+                                                        <complexType>
+                                                            <sequence>
+                                                                <element name="airToAir">
+                                                                    <complexType>
+                                                                        <attribute name="amount">
+                                                                            <simpleType>
+                                                                                <restriction base="byte">
+                                                                                    <minInclusive value="1" />
+                                                                                    <maxInclusive value="20" />
+                                                                                </restriction>
+                                                                            </simpleType>
+                                                                        </attribute>
+                                                                        <attribute name="range">
+                                                                            <simpleType>
+                                                                                <restriction base="positiveInteger">
+                                                                                    <minInclusive value="1" />
+                                                                                    <maxInclusive value="5000" />
+                                                                                </restriction>
+                                                                            </simpleType>
+                                                                        </attribute>
+                                                                    </complexType>
+                                                                </element>
+                                                                <element name="airToGrnd">
+                                                                    <complexType>
+                                                                        <attribute name="amount">
+                                                                            <simpleType>
+                                                                                <restriction base="byte">
+                                                                                    <minInclusive value="1" />
+                                                                                    <maxInclusive value="10" />
+                                                                                </restriction>
+                                                                            </simpleType>
+                                                                        </attribute>
+                                                                        <attribute name="height">
+                                                                            <simpleType>
+                                                                                <restriction base="positiveInteger">
+                                                                                    <minInclusive value="1" />
+                                                                                    <maxInclusive value="20000" />
+                                                                                </restriction>
+                                                                            </simpleType>
+                                                                        </attribute>
+                                                                    </complexType>
+                                                                </element>
+                                                            </sequence>
+                                                        </complexType>
+                                                    </element>
+                                                </sequence>
+                                            </complexType>
+                                        </element>
+                                        <element name="radar" minOccurs="0" maxOccurs="1">
+                                            <complexType>
+                                                <attribute name="name" type="string" use="required"/>
+                                            </complexType>
+                                        </element>
+                                    </sequence>
+                                </complexType>
+                            </element>
+                            <element name="parameters">
+                                <complexType>
+                                    <attribute name="length">
+                                        <simpleType>
+                                            <restriction base="double">
+                                                <minInclusive value="1" />
+                                                <maxInclusive value="45.0" />
+                                            </restriction>
+                                        </simpleType>
+                                    </attribute>
+                                    <attribute name="width">
+                                        <simpleType>
+                                            <restriction base="double">
+                                                <minInclusive value="1" />
+                                                <maxInclusive value="45.0" />
+                                            </restriction>
+                                        </simpleType>
+                                    </attribute>
+                                    <attribute name="height">
+                                        <simpleType>
+                                            <restriction base="double">
+                                                <minInclusive value="1" />
+                                                <maxInclusive value="45.0" />
+                                            </restriction>
+                                        </simpleType>
+                                    </attribute>
+                                </complexType>
+                            </element>
+                            <element name="price" type="positiveInteger"/>
+                         </sequence>
+                        <attribute name="id" type="positiveInteger" use="required"/>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

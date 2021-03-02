@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Create new route</title>
+</head>
+<body>
+<form action="#" th:action="@{/routecreate}" th:object="${route}" method="post">
+    <label for="status">status</label>
+    <input type="text" th:field="*{status}" id="status" placeholder="status">
+    <label for="description">Description</label>
+    <input type="text" th:field="*{description}" id="description" placeholder="Description">
+    <label for="startDate">Start Date</label>
+    <input type="text" th:field="*{startDate}" id="startDate" placeholder="Start Date">
+    <label for="endDate">End Date</label>
+    <input type="text" th:field="*{endDate}" id="endDate" placeholder="End Date">
+    <input type="submit" value="Create route">
+
+</form>
+</body>
+</html>

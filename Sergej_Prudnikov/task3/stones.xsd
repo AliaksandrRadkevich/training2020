@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/stones"
+	xmlns:tns="http://www.example.org/stones"
+	elementFormDefault="qualified">
+	<element name="stones">
+		<complexType>
+			<sequence>
+				<element name="stone" maxOccurs="unbounded">
+					<complexType>
+						<sequence>
+							<element name="name" type="string" />
+							<element name="preciousness">
+								<simpleType>
+									<restriction base="string">
+										<enumeration value="PRECIOUS" />
+										<enumeration value="SEMIPRECIOUS" />
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="origin" type="string" />
+							<element name="value" minOccurs="0">
+								<simpleType>
+									<restriction base="integer">
+										<minExclusive value="0" />
+									</restriction>
+								</simpleType>
+							</element>
+							<element name="visual-parameters">
+								<complexType>
+									<sequence>
+										<element name="color">
+											<simpleType>
+												<restriction base="string">
+													<enumeration value="GREEN" />
+													<enumeration value="RED" />
+													<enumeration value="YELLOW" />
+													<enumeration value="BLUE" />
+													<enumeration value="BLACK" />
+													<enumeration value="WHITE" />
+												</restriction>
+											</simpleType>
+										</element>
+										<element name="transparency">
+											<simpleType>
+												<restriction base="integer">
+													<minExclusive value="0" />
+													<maxInclusive value="100" />
+												</restriction>
+											</simpleType>
+										</element>
+										<element name="faceting">
+											<simpleType>
+												<restriction base="integer">
+													<minExclusive value="4" />
+													<maxInclusive value="15" />
+												</restriction>
+											</simpleType>
+										</element>
+									</sequence>
+								</complexType>
+							</element>
+						</sequence>
+						<attribute name="id" type="string" use="required" />
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

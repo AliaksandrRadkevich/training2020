@@ -1,0 +1,56 @@
+@charset "UTF-8";
+   li { 
+    list-style-type: none;
+    margin: 5px;
+   }
+   body { margin: 0; }
+   td { padding: 5px;}
+   input { font-size: 20px; }
+   select { font-size: 20px; }
+   textarea { 
+    font-size: 20pt;
+   }
+   #sidebar, #content, #logout, #login { position: absolute; } 
+   #sidebar, #content { overflow: auto; }
+   #header {
+    height: 80px;
+    background: #FEDFC0; border-bottom: 2px solid #7B5427;
+    font-size: 30px;
+   }
+   #header h1 { padding: 5px; margin: 0; }
+   #sidebar { 
+    width: 198px; background: #ECF5E4; border-right: 2px solid #231F20;
+    top: 82px; 
+    bottom: 0; 
+    font-size: 20px;
+   }
+   #sidebarItems {
+    margin-top: 25px;
+    margin-left: -25px;
+   }
+   #logout {
+    top: 28px;
+    right: 30px;
+    border: 1px solid #C0C0C0;
+    border-radius: 6px;
+    background: #DEB887;
+   }
+   #logout:hover {
+    background: #D2B48C;
+   }
+   #login {
+    font-size: 24px;
+    top: 1px;
+    right: 120px;
+   }
+   .button {
+    font-size: 20px;
+   }
+   #content {
+    padding: 10px;
+    top: 82px;
+    left: 200px; 
+    bottom: 0; right: 0;
+    font-size: 25px;
+    background: #FFFAFA;
+   }

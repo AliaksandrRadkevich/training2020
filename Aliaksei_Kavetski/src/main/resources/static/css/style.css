@@ -1,0 +1,234 @@
+body{
+    margin: 0;
+    font-family: 'Viaoda Libre', cursive;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.39);
+    line-height: 1.6;
+    background-color: #85caff;
+}
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;}
+.container{
+    width: 100%;
+    max-width: 1280px;
+    max-height: 1024px;
+    margin: 0 auto;
+}
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+
+        -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.intro__inner{
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+    opacity: 0.5;
+
+
+}
+.intro__suptitle{
+    margin-top: 100px;
+    margin-bottom: 15px;
+    font-family: 'Roboto';
+    font-size: 75px;
+    text-align: center;
+    opacity: 0.5;
+}
+.intro__title{
+    font-size: 120px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    text-align: center;
+    line-height: 1.2;
+}
+.intro__title:after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 60px auto ;
+    background-color: #fff;
+}
+.btn{
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 15px;
+    border: 3px solid #fff;
+    color: azure;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color .1s liner, broder 1.s liner;
+}
+.slider{
+    display: flex;
+    justify-content: space-between;
+}
+.slider__item{
+    margin-top: 30px;
+    width: 24%;
+    font-size: 18px;
+    color: azure;
+    position: relative;
+    text-transform: uppercase;
+    padding: 20px 0;
+    border-top: 3px solid azure;
+    opacity: .7;
+}
+.slider__item.active{
+    opacity: 1;
+}
+.slider__item.active:before{
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    z-index: 1;
+    background-color: rebeccapurple;
+}
+.slider__num{
+    font-size: 24px;
+    font-weight: 700px;
+}
+
+.btn:hover{
+    color: #ffd885;
+    border: 3px solid rgb(255, 209, 110);
+}
+a{
+    text-decoration: none;
+}
+.header{
+    padding-top: 20px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+}
+.header__inner{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.header__logo{
+    font-size: 25px;
+    font-weight: 700;
+    color: #ffd885;
+
+}
+.nav{
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.nav__link{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0  15px;
+    color: #F2906B;
+    text-decoration: none;
+    transition: color .2s linear;
+    position: relative;
+
+}
+.nav__link:after{
+    display: block;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    content:' ';
+    width: 100%;
+    height: 3px;
+    background-color: rgb(255, 209, 110);
+    position: absolute;
+    opacity: 0;
+
+    transition: opacity .2s liner;
+}
+.nav__link:hover{
+    color: rgb(255, 209, 110);
+
+}
+.nav__link.active{
+    color: #ffd885;
+}
+.nav__link:hover:after,.nav__link:active:after {
+    opacity: 1;
+}
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;
+    text-align: center;
+    border-collapse: collapse;
+    border-radius: 10px;
+    box-shadow: 0 0 0 10px #F2906B;
+    color: #452F21;
+    margin: 90px;
+    padding: 100px;
+}
+th {
+    padding: 10px 10px;
+    background: white;
+}
+table th:first-child {
+    border-top-left-radius: 20px;
+}
+table th:last-child {
+    border-top-right-radius: 20px;
+}
+td {
+    border-top: 10px solid #F2906B;
+    padding: 10px;
+    background: white;
+}
+table td:first-child {
+    border-bottom-left-radius: 20px;
+}
+table td:last-child {
+    border-bottom-right-radius: 20px;
+}
+.createuser{
+    text-align: left;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+h2{
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    text-align: left;
+    color: #fc0333;
+    margin: 40px;
+    padding: 40px;
+}
+input {
+    display:block;
+    width:100%;
+    margin:10px 0;
+    padding:10px;
+}
+.type-1:hover {
+    border: 1px solid #aaa;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Update request</title>
+</head>
+<body>
+<h2>Update request</h2>
+<form action="#" th:action="@{/requestupdate}" th:object="${request}" method="post">
+    <label for="id">ID</label>
+    <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
+    <br/>
+    <label for="description">Description</label>
+    <input type="text" th:field="*{description}" id="description" placeholder="Login">
+    <br/>
+    <input type="submit" value="Update Request">
+</form>
+</body>
+</html>

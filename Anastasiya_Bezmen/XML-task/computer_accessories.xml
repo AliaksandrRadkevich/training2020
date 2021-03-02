@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<computer_accessories xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xmlns="http://www.example.org/computerAccessory"
+             xsi:schemaLocation="http://www.example.org/computer_accessories  computer_accessories.xsd">
+    <computer_accessory>
+        <id>ID-1</id>
+        <name>keyboard</name>
+        <origin>USA</origin>
+        <price currency="BYN">68</price>
+        <type_accessory>
+            <peripheral>true</peripheral>
+            <energyConsumption power="watts">10</energyConsumption>
+            <availabilityCooler>false</availabilityCooler>
+            <type>IO_DEVICE</type>
+            <port>USB</port>
+        </type_accessory>
+        <critical>true</critical>
+    </computer_accessory>
+    <computer_accessory>
+        <id>ID-2</id>
+        <name>mouse</name>
+        <origin>Canada</origin>
+        <price currency="BYN">35</price>
+        <type_accessory>
+            <peripheral>true</peripheral>
+            <energyConsumption power="watts">7</energyConsumption>
+            <availabilityCooler>false</availabilityCooler>
+            <type>IO_DEVICE</type>
+            <port>USB</port>
+        </type_accessory>
+        <critical>false</critical>
+    </computer_accessory>
+    <computer_accessory>
+        <id>ID-3</id>
+        <name>motherboard</name>
+        <origin>China</origin>
+        <price currency="BYN">90</price>
+        <type_accessory>
+            <peripheral>true</peripheral>
+            <energyConsumption power="watts">25</energyConsumption>
+            <availabilityCooler>true</availabilityCooler>
+            <type>MULTIMEDIA_DEVICE</type>
+            <port>LPT</port>
+        </type_accessory>
+        <critical>true</critical>
+    </computer_accessory>
+</computer_accessories>

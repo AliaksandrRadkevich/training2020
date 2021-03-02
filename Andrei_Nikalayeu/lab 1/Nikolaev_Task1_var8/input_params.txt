@@ -1,0 +1,12 @@
+
+airlineName=Small Airline (from File)
+
+name=An 2; numberOfCrewMembers=2; fuelConsumptionPerOneHour=140.0; rangeOfFlight=845.0; maximumFlightAltitude=4.2; wingLength=18.0; passengerCapacity=12;
+
+name=An 124; numberOfCrewMembers=6; fuelConsumptionPerOneHour=12700.0; rangeOfFlight=16000.0; maximumFlightAltitude=11.6; wingLength=73.0; cargoCapacity=124000.0;
+
+name=An 24; numberOfCrewMembers=4; fuelConsumptionPerOneHour=800.0; rangeOfFlight=2761.0; maximumFlightAltitude=6.0; wingLength=29.0; passengerCapacity=52;
+
+name=IL 86; numberOfCrewMembers=15; fuelConsumptionPerOneHour=9900.0; rangeOfFlight=4600.0; maximumFlightAltitude=10.5; wingLength=48.0; passengerCapacity=250;
+
+name=An 12; numberOfCrewMembers=5; fuelConsumptionPerOneHour=1950.0; rangeOfFlight=5700.0; maximumFlightAltitude=8.5; wingLength=38.0; cargoCapacity=19500.0;

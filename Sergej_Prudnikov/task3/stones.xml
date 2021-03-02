@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stones xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.example.org/stones"
+	xsi:schemaLocation="http://www.example.org/stones stones.xsd">
+	<stone id="a1">
+		<name>diamond</name>
+		<preciousness>PRECIOUS</preciousness>
+		<origin>Russia</origin>
+		<value>1500</value>
+		<visual-parameters>
+			<color>BLUE</color>
+			<transparency>90</transparency>
+			<faceting>15</faceting>
+		</visual-parameters>
+	</stone>
+	<stone id="p1">
+		<name>ruby</name>
+		<preciousness>PRECIOUS</preciousness>
+		<origin>Thailand</origin>
+		<value>23</value>
+		<visual-parameters>
+			<color>RED</color>
+			<transparency>50</transparency>
+			<faceting>12</faceting>
+		</visual-parameters>
+	</stone>
+	<stone id="x1">
+		<name>chrysolite</name>
+		<preciousness>SEMIPRECIOUS</preciousness>
+		<origin>Russia</origin>
+		<value>15</value>
+		<visual-parameters>
+			<color>GREEN</color>
+			<transparency>45</transparency>
+			<faceting>10</faceting>
+		</visual-parameters>
+	</stone>
+</stones>

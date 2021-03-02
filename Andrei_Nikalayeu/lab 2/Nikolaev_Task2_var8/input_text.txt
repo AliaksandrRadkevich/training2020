@@ -1,0 +1,2 @@
+   The opens directive      specifies the name of a package to be opened by the current module. For code in other modules, this grants access at run time, but not compile time, to the public and protected types in the package, and the public and protected members of those types. It also grants reflective access to all types in the package, and all their members, for code in other modules.  
+Contacts: mob: +375(33)123-45-67, email: admin@google.com.

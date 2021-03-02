@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Create new application</title>
+</head>
+<body>
+<form action="#" th:action="@{/requestcreate}" th:object="${request}" method="post">
+    <input type="text" th:field="*{description}" id="description" placeholder="Description">
+    <label for="description">Description</label>
+    <input type="submit" value="Create request">
+
+</form>
+</body>
+</html>

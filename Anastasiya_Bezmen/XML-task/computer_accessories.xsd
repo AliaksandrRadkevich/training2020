@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/computerAccessory"
+           xmlns:tns="http://www.example.org/computerAccessory" elementFormDefault="qualified">
+    <xs:element name="computer_accessories">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="computer_accessory" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:ID"/>
+                            <xs:element name="name" type="xs:string"/>
+                            <xs:element name="origin" type="xs:string"/>
+                            <xs:element name="price">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:restriction base="xs:int">
+                                            <xs:attribute name="currency" type="xs:string" fixed="BYN"/>
+                                        </xs:restriction>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="type_accessory">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="peripheral" type="xs:boolean"/>
+                                        <xs:element name="energyConsumption">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:restriction base="xs:int">
+                                                        <xs:attribute name="power" type="xs:string" fixed="watts"/>
+                                                    </xs:restriction>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="availabilityCooler" type="xs:boolean"/>
+                                        <xs:element name="type">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="IO_DEVICE"/>
+                                                    <xs:enumeration value="MULTIMEDIA_DEVICE"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="port">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="COM"/>
+                                                    <xs:enumeration value="USB"/>
+                                                    <xs:enumeration value="LPT"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="critical" type="xs:boolean"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
